@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Multimodal Bench 처리 구조</title>
+  <desc id="desc">브라우저에서 설정한 실험을 Python API가 저장하고 실행 대기열에 등록합니다. 어댑터가 외부 API 또는 로컬 모델을 호출하고 측정 결과를 SQLite에 저장합니다. 정답은 모델에 전달하지 않습니다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#91a7cb"/></marker>
+    <style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Malgun Gothic',sans-serif}.title{font-size:18px;font-weight:700;fill:#263b60}.sub{font-size:12px;fill:#788aa6}.label{font-size:14px;font-weight:650;fill:#2c446b}.line{fill:none;stroke:#a9bad4;stroke-width:2;marker-end:url(#arrow)}.box{fill:white;stroke:#dbe4f3;stroke-width:1.5}</style>
+  </defs>
+  <rect width="1000" height="560" rx="20" fill="#f5f8fd"/>
+  <text x="35" y="40" class="title">입력에서 측정까지, 추적 가능한 한 번의 실험</text>
+  <text x="35" y="64" class="sub">Windows · macOS 브라우저 / Python 표준 라이브러리 / 모델 서버 분리</text>
+  <rect x="35" y="95" width="930" height="110" rx="15" fill="#edf2ff"/>
+  <rect x="65" y="117" width="220" height="65" rx="11" class="box"/>
+  <text x="88" y="145" class="label">01  브라우저</text><text x="88" y="166" class="sub">모델 · 데이터 · 실행 조건 선택</text>
+  <rect x="390" y="117" width="220" height="65" rx="11" fill="#244fdd"/>
+  <text x="413" y="145" class="label" style="fill:white">02  로컬 웹 API</text><text x="413" y="166" class="sub" style="fill:#c6d6ff">검증 · 실험 스냅샷 · 원본 업로드</text>
+  <rect x="715" y="117" width="220" height="65" rx="11" class="box"/>
+  <text x="738" y="145" class="label">SQLite + 파일 저장</text><text x="738" y="166" class="sub">설정 · 원본 · 결과 · 실행 이력</text>
+  <path d="M285 150H390M610 150H715" class="line"/>
+  <path d="M500 183V241" class="line"/>
+  <rect x="390" y="242" width="220" height="65" rx="11" class="box"/>
+  <text x="413" y="270" class="label">03  실험 실행기</text><text x="413" y="291" class="sub">모델 순차 실행 · 동시 요청 제어</text>
+  <rect x="65" y="242" width="220" height="65" rx="11" fill="#e9f6f1" stroke="#cde8dd"/>
+  <text x="88" y="270" class="label">정답은 채점용으로 분리</text><text x="88" y="291" class="sub">질문 · 선택지 · 미디어만 모델 전달</text>
+  <path d="M500 307V350" class="line"/>
+  <rect x="390" y="350" width="220" height="65" rx="11" class="box"/>
+  <text x="413" y="378" class="label">04  모델 어댑터</text><text x="413" y="399" class="sub">요청 형식 변환 · 사용량 수집</text>
+  <rect x="65" y="350" width="220" height="65" rx="11" class="box"/>
+  <text x="88" y="378" class="label">외부 API</text><text x="88" y="399" class="sub">Jev · Clef · 호환 멀티모달 모델</text>
+  <rect x="715" y="350" width="220" height="65" rx="11" class="box"/>
+  <text x="738" y="378" class="label">로컬 / 원격 모델 서버</text><text x="738" y="399" class="sub">Ollama · Jev-Omni CUDA worker</text>
+  <path d="M390 382H285M610 382H715" class="line"/>
+  <path d="M175 415V480H390M825 415V480H610" class="line"/>
+  <rect x="390" y="447" width="220" height="65" rx="11" fill="#e9f6f1" stroke="#cde8dd"/>
+  <text x="413" y="475" class="label">05  측정 · 채점</text><text x="413" y="496" class="sub">정확도 · 토큰 · p95 · 비용</text>
+  <path d="M610 480H960V218H825V183" class="line"/>
+  <text x="35" y="538" class="sub">키는 .env에 보관 · 데모/실측 분리 · 누락값은 미측정 · 중단 후 저장된 관측치 유지</text>
+</svg>

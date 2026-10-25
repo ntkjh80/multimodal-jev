@@ -1,0 +1,26 @@
+{
+  "name": "한국어 차량 명령 · 사용자 예제",
+  "version": "1",
+  "split": "test",
+  "source": "직접 작성한 예시이며 공개 벤치마크가 아님",
+  "samples": [
+    {
+      "id": "command-001",
+      "text": "음악 소리를 조금 줄여 줘.",
+      "question": "이 발화는 어떤 기능에 대한 요청인가요?",
+      "choices": {"audio": "오디오 설정", "navigation": "길 안내", "climate": "냉난방 설정"},
+      "label": "audio",
+      "tags": ["한국어", "짧은 발화"],
+      "group": "speaker-001"
+    },
+    {
+      "id": "command-002",
+      "text": "가장 가까운 충전소로 안내해 줘.",
+      "question": "이 발화는 어떤 기능에 대한 요청인가요?",
+      "choices": {"audio": "오디오 설정", "navigation": "길 안내", "climate": "냉난방 설정"},
+      "label": "navigation",
+      "tags": ["한국어", "짧은 발화"],
+      "group": "speaker-002"
+    }
+  ]
+}

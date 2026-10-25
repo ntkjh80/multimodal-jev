@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244fdd">
+  <title>Multimodal Bench · 모델 비교 실험실</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <aside class="sidebar">
+    <a href="#overview" class="brand"><span class="brand-mark">m<span>·</span></span><span>Multimodal<br><strong>Bench</strong></span></a>
+    <div class="nav-label">WORKSPACE</div>
+    <nav aria-label="주 메뉴">
+      <a href="#overview" data-nav="overview"><span>◫</span> 대시보드</a>
+      <a href="#models" data-nav="models"><span>⬡</span> 모델 연결 <i id="model-count"></i></a>
+      <a href="#datasets" data-nav="datasets"><span>▤</span> 데이터셋</a>
+      <a href="#experiments" data-nav="experiments"><span>⊞</span> 벤치마크 실행</a>
+      <a href="#results" data-nav="results"><span>↗</span> 실험 결과</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <a href="/guide.html" target="_blank" rel="noopener">구조도 · 사용 설명 <span>↗</span></a>
+      <div class="local-info"><span class="dot"></span> Local workspace <small>데이터는 이 PC에 저장됩니다</small></div>
+      <span class="version">v0.1.0 · Windows & macOS</span>
+    </div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span>워크스페이스 <b>/</b> <span id="breadcrumb">대시보드</span></span><span class="server-state"><span class="dot"></span> 로컬 서버 연결됨</span></header>
+    <main id="main" tabindex="-1"><div class="loading">실험실을 불러오고 있습니다…</div></main>
+    <footer>한 가지 입력, 같은 질문, 비교 가능한 기록. <span>모의 결과와 실제 측정을 구분합니다.</span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+</body>
+</html>

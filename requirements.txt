@@ -1,0 +1,3 @@
+# 기본 웹앱은 Python 표준 라이브러리만 사용합니다.
+# pip install -r requirements.txt 는 추가 패키지를 설치하지 않습니다.
+# GPU 모델은 workers/requirements.txt 의 선택형 환경에 분리합니다.

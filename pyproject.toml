@@ -1,0 +1,6 @@
+[project]
+name = "multimodal-bench"
+version = "0.1.0"
+description = "Cross-platform local multimodal benchmarking workbench"
+requires-python = ">=3.9"
+dependencies = []

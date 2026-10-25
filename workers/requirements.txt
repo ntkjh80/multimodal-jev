@@ -1,0 +1,11 @@
+# 선택형 CUDA worker 전용. 웹앱의 .venv와 분리해서 설치하세요.
+# CUDA에 맞는 PyTorch 설치는 https://pytorch.org/get-started/locally/ 참고.
+torch>=2.11,<3
+transformers>=5.17,<6
+accelerate>=1,<2
+huggingface-hub>=0.34,<2
+safetensors>=0.5,<1
+numpy>=1.26,<3
+pillow>=11,<13
+opencv-python-headless>=4.10,<5
+av>=14,<17
